@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs';
-import { Matches } from './footballresponse';
+import { Match } from './footballresponse';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,9 @@ export class FootballApiService {
 
   constructor(private _http:HttpClient) { }
 
-  getMatches(): Observable<Matches[]> {
+  getMatches(): Observable<Match[]> {
     
-    return this._http.get<Matches[]>(this.apiUrl);
+    return this._http.get<Match[]>(this.apiUrl);
   }
  
 }

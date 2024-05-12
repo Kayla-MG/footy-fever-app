@@ -1,11 +1,11 @@
-export interface Matches{
+export interface Match{
   name : string,
   rounds : matches[]  
 
 }
 interface matches{
     date : string,
-    team1: string,
+    team1 : string,
     team2 : string,
     score : Score,
 }
